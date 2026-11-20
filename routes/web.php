@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // 一般社員・総務部社員共通
-Route::get('/', [IndexController::class, 'show']);
+Route::get('/', [IndexController::class, 'index']);
 // 書籍検索
 Route::get('/books/search', [BookSearchController::class, 'search']);
 // 書籍詳細
