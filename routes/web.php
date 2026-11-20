@@ -1,10 +1,16 @@
 <?php
 
 use App\Http\Controllers\BookCreateController;
+use App\Http\Controllers\BookDeleteController;
+use App\Http\Controllers\BookDetailController;
+use App\Http\Controllers\BookEditController;
+use App\Http\Controllers\BookListController;
 use App\Http\Controllers\BookSearchController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserCreateController;
 use App\Http\Controllers\UserDeleteController;
 use App\Http\Controllers\UserEditController;
+use App\Http\Controllers\UserListController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,9 +27,6 @@ Route::prefix('admin')
   ->group(function () {
     // 書籍関係
 
-    // 書籍一覧
-    Route::get('/books', [BookListController::class, 'index']);
-
     // 書籍追加
     Route::get('/books/create', [BookCreateController::class, 'create']);
     Route::post('/books', [BookCreateController::class, 'store']);
@@ -33,7 +36,7 @@ Route::prefix('admin')
     Route::put('/books/{book}', [BookEditController::class, 'update']);
 
     // 書籍削除
-    Route::delete('/books/{book}', [BookDeleteController::class, 'destroy']);
+    Route::post('/books/{book}', [BookDeleteController::class, 'destroy']);
 
     // 社員関係
 
