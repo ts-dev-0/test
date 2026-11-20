@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\BookCreateController;
 use App\Http\Controllers\BookSearchController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserDeleteController;
@@ -22,8 +22,7 @@ Route::prefix('admin')
     // 書籍関係
 
     // 書籍一覧
-    Route::get('/books', [BookListController::class, 'index'])
-      ->name('books.index');
+    Route::get('/books', [BookListController::class, 'index']);
 
     // 書籍追加
     Route::get('/books/create', [BookCreateController::class, 'create']);
