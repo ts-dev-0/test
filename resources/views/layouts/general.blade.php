@@ -8,7 +8,8 @@
 <body>
     <header>
         <h1>書籍管理システム</h1>
-
+        <a href="/admin/books/create">管理者ページへ</a>
+        <hr>
         <nav>
             <a href="/">トップページ</a>
         </nav>
