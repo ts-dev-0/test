@@ -57,5 +57,7 @@ Route::prefix('admin')
     Route::post('/users/update', [UserEditController::class, 'update']);
 
     // 社員削除
-    Route::delete('/users/{user}', [UserDeleteController::class, 'destroy']);
+    Route::get('/users/erase', [UserDeleteController::class, 'erase']);
+    Route::post('/users/erase', [UserDeleteController::class, 'erase']);
+    Route::post('/users/delete', [UserDeleteController::class, 'delete']);
   });
