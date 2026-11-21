@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>社員データ編集ページ</title>
-</head>
-<body>
+@extends('layouts.admin')
+@section('title', '社員データ編集ページ')
+
+@section('content')
   <h1>社員データ編集ページ</h1>
   @if (@isset($user))
   <form action="/admin/users/update" method="POST">
@@ -37,5 +32,5 @@
       <input type="submit" value="社員検索">
     </form>
   @endif
-</body>
-</html>
+    
+@endsection

@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>社員登録ページ</title>
-</head>
-<body>
-  <header>
-    <a href="/">一般社員ページへ</a>
-  </header>
-  <main>
+@extends('layouts.admin')
+
+@section('title', '社員登録ページ')
+    @section('content')
     <h1>社員登録ページ</h1>
     <form action="/admin/users/store" method="POST">
       <div>
@@ -39,6 +30,7 @@
       <br>
       <input type="submit" value="社員を追加する">
     </form>
-  </main>
-</body>
-</html>
+@endsection
+
+
+
