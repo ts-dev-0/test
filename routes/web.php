@@ -52,8 +52,9 @@ Route::prefix('admin')
     Route::post('/users/store', [UserCreateController::class, 'store']);
 
     // 社員編集
-    Route::get('/users/{user}/edit', [UserEditController::class, 'edit']);
-    Route::put('/users/{user}', [UserEditController::class, 'update']);
+    Route::get('/users/edit', [UserEditController::class, 'edit']);
+    Route::post('/users/edit', [UserEditController::class, 'edit']);
+    Route::post('/users/update', [UserEditController::class, 'update']);
 
     // 社員削除
     Route::delete('/users/{user}', [UserDeleteController::class, 'destroy']);
