@@ -49,7 +49,7 @@ Route::prefix('admin')
 
     // 社員登録
     Route::get('/users/create', [UserCreateController::class, 'create']);
-    Route::post('/users', [UserCreateController::class, 'store']);
+    Route::post('/users/store', [UserCreateController::class, 'store']);
 
     // 社員編集
     Route::get('/users/{user}/edit', [UserEditController::class, 'edit']);
