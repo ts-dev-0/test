@@ -9,7 +9,7 @@
 <body>
   <h1>書籍編集ページ</h1>
   @if (@isset($book))
-  <form action="/admin/books" method="POST">
+  <form action="/admin/books/update" method="POST">
     <input type="hidden" name="id" value="{{ $book->id }}">
     <label for="title">
       書籍名:

@@ -29,16 +29,18 @@ Route::prefix('admin')
 
     // 書籍追加
     Route::get('/books/create', [BookCreateController::class, 'create']);
-    Route::post('/books', [BookCreateController::class, 'store']);
+    Route::post('/books/store', [BookCreateController::class, 'store']);
 
     // 書籍編集
     Route::get('/books/edit', [BookEditController::class, 'edit']);
     Route::post('/books/edit', [BookEditController::class, 'edit']);
 
-    Route::post('/books', [BookEditController::class, 'update']);
+    Route::post('/books/update', [BookEditController::class, 'update']);
 
     // 書籍削除
-    Route::post('/books/{book}', [BookDeleteController::class, 'destroy']);
+    Route::get('/books/erase', [BookDeleteController::class, 'erase']);
+    Route::post('/books/erase', [BookDeleteController::class, 'erase']);
+    Route::post('/books/delete', [BookDeleteController::class, 'delete']);
 
     // 社員関係
 

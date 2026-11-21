@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>書籍追加ページ</h1>
-  <form action="/admin/books" method="POST">
+  <form action="/admin/books/store" method="POST">
     <div>
       <label for="title">書籍名</label>
       <input type="text" name="title">
