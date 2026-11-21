@@ -7,9 +7,11 @@
   <title>トップページ</title>
 </head>
 <body>
-  <h1>トップページ</h1>
-  <header>ここはヘッダーです</header>
+  <header>
+    <a href="/admin/users/create">管理者画面</a>
+  </header>
   <main>
+    <h1>トップページ</h1>
     @forelse ($books as $book)
     <div>
         <p>{{ $book['title'] }}</p>
