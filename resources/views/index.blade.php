@@ -9,6 +9,10 @@
 <body>
   <header>
     <a href="/admin/users/create">管理者画面</a>
+    <form action="/books/search" method="get">
+      <input type="text" name="keyword">
+      <input type="submit" value="検索">
+    </form>
   </header>
   <main>
     <h1>トップページ</h1>

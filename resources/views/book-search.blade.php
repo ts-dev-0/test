@@ -20,10 +20,6 @@
     <p>{{$book['description']  ?? '未登録'}}</p>
     <p>{{$book['thumbnail']  ?? '未登録'}}</p>
   </div>
-  {{-- TODO: 認証を導入後、roleによって削除ボタンの表示を切り分ける --}}
-  <form action="/books/{{ $book['id'] }}" method="post">
-    <input type="submit" value="削除画面へ">
-  </form>
   @endforeach
 </body>
 </html>
