@@ -32,8 +32,10 @@ Route::prefix('admin')
     Route::post('/books', [BookCreateController::class, 'store']);
 
     // 書籍編集
-    Route::get('/books/{book}/edit', [BookEditController::class, 'edit']);
-    Route::put('/books/{book}', [BookEditController::class, 'update']);
+    Route::get('/books/edit', [BookEditController::class, 'edit']);
+    Route::post('/books/edit', [BookEditController::class, 'edit']);
+
+    Route::post('/books', [BookEditController::class, 'update']);
 
     // 書籍削除
     Route::post('/books/{book}', [BookDeleteController::class, 'destroy']);
